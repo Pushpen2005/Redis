@@ -16,7 +16,7 @@ app.post('/email', async (req, res) => {
         return res.status(400).json({ error: 'To, subject, and body are required.' });
     }
 
-    const email = { to,subject,body};
+    const email = { to, subject, body };
     await redis.lpush(QUEUE_KEY, JSON.stringify(email));
     res.json({ message: 'Email added to queue successfully.' });
 });
