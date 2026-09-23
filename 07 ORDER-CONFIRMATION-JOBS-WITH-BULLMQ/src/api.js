@@ -1,5 +1,5 @@
 import express from 'express';
-import {emailQueue} from './queue.js';
+import { emailQueue } from './queue.js';
 
 const app = express();
 const port = 3009;
